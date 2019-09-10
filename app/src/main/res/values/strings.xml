@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Athletic</string>
+    <string name="start">Start</string>
+    <string name="distance">跑了： 0米</string>
+    <string name="title_activity_me">Me</string>
+    <string name="title_activity_login">Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

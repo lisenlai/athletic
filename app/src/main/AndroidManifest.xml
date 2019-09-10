@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.laidage.ican">
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 用于访问SD卡 -->
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:logo="@drawable/logo"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.laidage.ican.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0f34543b3134ffcd38c5583d4a83f4de" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".TryButNotUse.MainActivity">
+        </activity>
+        <activity
+            android:name=".TryButNotUse.Run"
+            android:label="跑步">
+        </activity>
+        <activity android:name=".TryButNotUse.Runs">
+        </activity>
+        <activity
+            android:name=".Doing.Walking"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Login"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Registered"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity
+            android:name=".map1"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+
+        <service
+            android:name=".TryButNotUse.Kilo"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".TryButNotUse.Datat">
+        </activity>
+        <activity
+            android:name=".TryButNotUse.Profile"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity android:name=".MainScreen">
+        </activity>
+
+        <activity android:name=".TryButNotUse.Registered_Information">
+        </activity>
+        <activity android:name=".TryButNotUse.ChooseImage">
+        </activity>
+        <activity android:name=".Doing.Bicycling"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Doing.Running"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity android:name=".ThreeHistory.Walk_History"
+            android:label="行走历史记录"
+            >
+        </activity>
+        <activity android:name=".ThreeHistory.Run_History"
+            android:label="跑步历史记录"
+          >
+        </activity>
+        <activity android:name=".ThreeHistory.Bicycle_History"
+            android:label="骑行历史记录"
+           >
+        </activity>
+    </application>
+
+</manifest>

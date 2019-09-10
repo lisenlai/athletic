@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B5367"
+    android:orientation="vertical"
+    tools:context=".Doing.Walking">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/doing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            tools:text="" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        >
+
+        <TextView
+            android:id="@+id/kilometers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="0.00"
+            android:textColor="#FFFFFF"
+            android:textSize="100dp"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/kilometers"
+            android:layout_toEndOf="@+id/kilometers"
+            android:layout_toRightOf="@+id/kilometers"
+            android:text="公里"
+            android:textColor="#FFFFFF"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp">
+
+        <Button
+            android:id="@+id/mapButton2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/doing_map" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/speed"
+            android:text="0"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:id="@+id/time"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:id="@+id/kilocalorie"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="米/分钟"
+            android:typeface="sans"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="用时"
+            android:typeface="sans"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="千卡"
+            android:typeface="sans"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/pause1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/pause1"
+            android:text="暂停"
+            android:textColor="#5B5367"
+            android:textSize="20dp"
+            android:typeface="sans" />
+
+        <Button
+            android:id="@+id/continue1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="63dp"
+            android:layout_marginLeft="63dp"
+            android:background="@drawable/continue1"
+            android:text="继续"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:typeface="sans" />
+
+        <Button
+            android:id="@+id/stop1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="63dp"
+            android:layout_marginRight="63dp"
+            android:background="@drawable/stop"
+            android:text="结束"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+</LinearLayout>

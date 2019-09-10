@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B5367"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="260dp"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp"
+        android:drawablePadding="10dp"
+        android:hint="请输入手机号码"
+        android:maxLength="11"
+        android:digits="0123456789"
+        android:drawableLeft="@drawable/account" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="260dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/account"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:maxLength="16"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/password" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="260dp"
+        android:layout_height="63dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="230dp"
+        android:background="@drawable/login1"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:typeface="sans" />
+
+    <Button
+        android:id="@+id/registered"
+        android:background="#5B5367"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="现在注册"
+        android:textColor="@null"
+        android:textSize="15sp"
+        android:typeface="sans"
+        style="?android:attr/borderlessButtonStyle"/>
+</RelativeLayout>
